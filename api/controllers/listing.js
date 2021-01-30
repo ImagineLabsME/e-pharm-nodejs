@@ -39,7 +39,7 @@ exports.addLists = async (req, res) => {
             return res.status(201).json({
                 status: 'fail',
                 data: {
-                    message: 'رجاء أدخل اسم المستخدم صحيح'
+                    message: 'الرجاء أدخل اسم المستخدم صحيح'
                 }
             });
         }
