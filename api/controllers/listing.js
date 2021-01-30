@@ -10,7 +10,7 @@ const nameCheck = require('../../utils/name-check');
 exports.viewLists = async (req, res) => {
     try {
         const userRegex = new RegExp(req.query.search_value, 'i')
-        const list = await List.find({ medication_name: userRegex }).limit(Number(req.query.paginate));
+        const list = await List.find({ medication_name: userRegex }).limit(Number(req.query.paginate)).sort({ 'createdAt': 'desc' });
         if (!list) {
             res.status(401).json({
                 status: 'fail',
@@ -39,7 +39,7 @@ exports.addLists = async (req, res) => {
             return res.status(201).json({
                 status: 'fail',
                 data: {
-                    message: 'Please enter a valid name'
+                    message: 'رجاء أدخل اسم المستخدم صحيح'
                 }
             });
         }
@@ -55,7 +55,7 @@ exports.addLists = async (req, res) => {
         res.status(201).json({
             status: 'success',
             data: {
-                message: 'Your request has been sent successfully.'
+                message: 'تم ارسال طلبك'
             }
         });
     } catch (error) {
