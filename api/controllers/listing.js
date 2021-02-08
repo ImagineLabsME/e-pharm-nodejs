@@ -29,14 +29,14 @@ exports.viewLists = async (req, res) => {
             data: {
                 errorType: 'SERVER_ERROR',
                 errorMessage: 'حدث خطأ في الخادم، الرجاء المحاولة لاحقاً',
-            }
+            }   
         });
     }
 }
 exports.addLists = async (req, res) => {
     try {
         if (!nameCheck(req.body.name)) {
-            return res.status(201).json({
+            return res.status(415).json({
                 status: 'fail',
                 data: {
                     message: 'الاسم غير صحيح'
