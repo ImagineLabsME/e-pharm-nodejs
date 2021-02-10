@@ -1,5 +1,6 @@
 const mailgun = require('../../mail/mailgun');
 const response = require('../../constants/commonResponses');
+const logger = require('../../config/winston');
 /**
  * Contact us route POST /api/contact
  * @param { Object } 
@@ -21,6 +22,15 @@ exports.contactMessage = async (req, res) => {
             message: response.contactUsSuccess.data.message['AR']
         });
     } catch (error) {
+        logger.error({
+            error,
+            ip: req.ip,
+            baseURL: req.baseUrl,
+            originalURL: req.originalUrl,
+            protocol: req.protocol,
+            route: req.route,
+            subdomains: req.subdomains
+        });
         res.status(500).json({
             status: response.serverError.status,
             data: {

@@ -4,3 +4,4 @@ node_modules
 .env.testing
 .env.staging
 .env.production
+logging
