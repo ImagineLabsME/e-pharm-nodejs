@@ -23,7 +23,9 @@ exports.contactMessage = async (req, res) => {
         logger.info(`Response 200`);
         res.status(200).json({
             status: response.contactUsSuccess.status,
-            message: response.contactUsSuccess.data.message['AR']
+            data: {
+                message: response.contactUsSuccess.data.message['AR']
+            }
         });
     } catch (error) {
         logger.error({
