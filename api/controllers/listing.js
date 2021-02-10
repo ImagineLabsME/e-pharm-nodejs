@@ -33,6 +33,10 @@ exports.viewLists = async (req, res) => {
         });
     }
 }
+/**
+ * Add list route POST /api/listing/add
+ * @param { Object } 
+ */
 exports.addLists = async (req, res) => {
     try {
         if (!nameCheck(req.body.name)) {

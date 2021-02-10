@@ -10,4 +10,13 @@ module.exports = {
             }
         }
     },
+    contactUsSuccess: {
+        status: 'success',
+        data: {
+            message: {
+                AR: 'تم ارسال رسالتك',
+                EN: 'Your message has been sent'
+            }
+        }
+    }
 }
