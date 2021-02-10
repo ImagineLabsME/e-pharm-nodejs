@@ -18,5 +18,6 @@ module.exports = {
                 EN: 'Your message has been sent'
             }
         }
-    }
+    },
+    
 }

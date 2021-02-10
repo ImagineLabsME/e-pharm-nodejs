@@ -1,5 +1,9 @@
 const mailgun = require('../../mail/mailgun');
 const response = require('../../constants/commonResponses');
+/**
+ * Contact us route POST /api/contact
+ * @param { Object } 
+ */
 exports.contactMessage = async (req, res) => {
     try {
         const email = await mailgun.contactUsEmail(req.body.fullName, req.body.email, req.body.message);
@@ -18,10 +22,10 @@ exports.contactMessage = async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({
-            status: 'Server Error',
+            status: response.serverError.status,
             data: {
-                errorType: 'SERVER_ERROR',
-                errorMessage: 'حدث خطأ في الخادم، الرجاء المحاولة لاحقاً',
+                errorType: response.serverError.data.errorType,
+                errorMessage: response.serverError.data.message['AR'],
             }
         });
     }

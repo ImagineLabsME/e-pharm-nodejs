@@ -11,7 +11,8 @@ exports.viewLists = async (req, res) => {
     try {
         const userRegex = new RegExp(req.query.search_value, 'i')
         const list = await List.find({ medication_name: userRegex }).limit(Number(req.query.paginate)).sort({ 'createdAt': 'desc' });
-        if (!list) {
+        const length = await List.count({});
+        if (!list || !length) {
             res.status(401).json({
                 status: 'fail',
                 data: {
@@ -21,15 +22,16 @@ exports.viewLists = async (req, res) => {
         }
         res.status(200).json({
             status: 'success',
+            length,
             data: list
         })
     } catch (error) {
         res.status(500).json({
-            status: 'Server Error',
+            status: response.serverError.status,
             data: {
-                errorType: 'SERVER_ERROR',
-                errorMessage: 'حدث خطأ في الخادم، الرجاء المحاولة لاحقاً',
-            }   
+                errorType: response.serverError.data.errorType,
+                errorMessage: response.serverError.data.message['AR'],
+            }
         });
     }
 }
@@ -64,10 +66,10 @@ exports.addLists = async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({
-            status: 'Server Error',
+            status: response.serverError.status,
             data: {
-                errorType: 'SERVER_ERROR',
-                errorMessage: 'حدث خطأ في الخادم، الرجاء المحاولة لاحقاً',
+                errorType: response.serverError.data.errorType,
+                errorMessage: response.serverError.data.message['AR'],
             }
         });
     }
