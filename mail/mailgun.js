@@ -8,8 +8,8 @@ const contactUsEmail = async (fullName, email, message) => {
         const data = {
             from: `Phoenix Support <mailgun@${DOMAIN}>`,
             to: "sirajmhanna@hotmail.com",
-            subject: "Welcome To Phoenix",
-            text: `Full name: ${fullName} \nMessage: ${message} \nEmail: ${email}`
+            subject: "E-pharm Contact Form Submitted",
+            text: `Full name: ${fullName} \n\nMessage: ${message} \n\nEmail: ${email}`
         };
         const mgRes = await mg.messages().send(data);
         if (!mgRes || mgRes && mgRes.message !== "Queued. Thank you.") {
