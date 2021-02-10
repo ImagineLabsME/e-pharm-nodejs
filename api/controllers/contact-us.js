@@ -7,8 +7,11 @@ const logger = require('../../config/winston');
  */
 exports.contactMessage = async (req, res) => {
     try {
+        logger.info('Contact-Us controller');
+        logger.info(`Sending email`);
         const email = await mailgun.contactUsEmail(req.body.fullName, req.body.email, req.body.message);
         if (!email) {
+            logger.warn(`Failed to send email`);
             res.status(503).json({
                 status: response.genericError.status,
                 data: {
@@ -17,6 +20,7 @@ exports.contactMessage = async (req, res) => {
                 jwt: req.refreshToken
             });
         }
+        logger.info(`Response 200`);
         res.status(200).json({
             status: response.contactUsSuccess.status,
             message: response.contactUsSuccess.data.message['AR']

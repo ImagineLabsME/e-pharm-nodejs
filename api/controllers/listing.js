@@ -18,10 +18,10 @@ exports.viewLists = async (req, res) => {
         const length = await List.count({});
         if (!list || !length) {
             !list ? logger.warn(`list error`) : logger.warn(`length error`);
-            res.status(401).json({
-                status: 'fail',
+            res.status(503).json({
+                status: response.genericError.status,
                 data: {
-                    message: 'حدث خطأ ما يرجى المحاولة لاحقا'
+                    message: response.genericError.data.message['AR']
                 }
             })
         }
@@ -56,11 +56,14 @@ exports.viewLists = async (req, res) => {
  */
 exports.addLists = async (req, res) => {
     try {
+        logger.info(`Add list controller`);
+        logger.info(`Checking if name is valid`);
         if (!nameCheck(req.body.name)) {
+            logger.warn(`Invalid name ${req.body.name}`);
             return res.status(415).json({
-                status: 'fail',
+                status: response.invalidName.status,
                 data: {
-                    message: 'الاسم غير صحيح'
+                    message: response.invalidName.data.message['AR']
                 }
             });
         }
@@ -72,11 +75,13 @@ exports.addLists = async (req, res) => {
             quantity: req.body.quantity,
             needed_by: req.body.needed_by
         });
+        logger.info(`Adding list`);
         await list.save();
+        logger.info(`Response 201 -- added successfully`);
         res.status(201).json({
-            status: 'success',
+            status: response.successAddList.status,
             data: {
-                message: 'تم ارسال طلبك'
+                message: response.successAddList.data.message['AR']
             }
         });
     } catch (error) {
