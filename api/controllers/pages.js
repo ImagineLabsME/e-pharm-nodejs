@@ -9,9 +9,19 @@ exports.page = (req, res) => {
 
         let data;
         switch (req.query.page_name) {
-            case 'sidebar': data = req.query.lang === 'EN' ? pages.sidebar.EN : data = pages.sidebar.AR;
+            case 'home': data = req.query.lang === 'EN' ? pages.home.EN : pages.home.AR;
                 break;
-            case 'header': data = req.query.lang === 'EN' ? pages.header.EN : data = pages.header.AR;
+            case 'sidebar': data = req.query.lang === 'EN' ? pages.sidebar.EN : pages.sidebar.AR;
+                break;
+            case 'header': data = req.query.lang === 'EN' ? pages.header.EN : pages.header.AR;
+                break;
+            case 'contact': data = req.query.lang === 'EN' ? pages.contact.EN : pages.contact.AR;
+                break;
+            case 'viewListings': data = req.query.lang === 'EN' ? pages.viewListings.EN : pages.viewListings.AR;
+                break;
+            case 'addListings': data = req.query.lang === 'EN' ? pages.addListings.EN : pages.addListings.AR;
+                break;
+                case 'notFound': data = req.query.lang === 'EN' ? pages.notFound.EN : pages.notFound.AR;
                 break;
             default:
                 logger.info(`Response 204 -- No such page/content`);

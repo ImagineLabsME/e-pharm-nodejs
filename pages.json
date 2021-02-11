@@ -3,7 +3,7 @@
         "EN": {
             "sidebar_item_1": "close",
             "sidebar_item_2": "Home",
-            "sidebar_item_3": "View Listing",
+            "sidebar_item_3": "View Listings",
             "sidebar_item_4": "Add Listing",
             "sidebar_item_5": "Help"
         },
@@ -23,6 +23,120 @@
         "AR": {
             "header_item_1": "عربي",
             "header_item_2": "الإنجليزية"
+        }
+    },
+    "home": {
+        "EN": {
+            "title_header": "Homepage",
+            "paragraph": "Welcome to E-pharm",
+            "view_listings_button": "View Listings",
+            "add_listing_button": "Add Listing"
+        },
+        "AR": {
+            "title_header": "الصفحة الرئيسية",
+            "paragraph": "مرحبًا بكم في E-pharm",
+            "view_listings_button": "عرض القوائم",
+            "add_listing_button": "إضافة قائمة"
+        }
+    },
+    "contact": {
+        "EN": {
+            "title_header": "Contact",
+            "full_name_label": "Name*",
+            "email_label": "Email*",
+            "message_label": "Message*",
+            "submit_button": "Submit",
+            "email_field_required": "Email field is required",
+            "email_field_invalid": "Invalid email address",
+            "full_name_field_required": "Name field is required",
+            "message_field_required": "Message field is required"
+        },
+        "AR": {
+            "title_header": "جهة اتصال",
+            "full_name_label": "الاسم *",
+            "email_label": "البريد الإلكتروني",
+            "message_label": "الرسالة *",
+            "Submit_button": "إرسال",
+            "email_field_required": "حقل البريد الإلكتروني مطلوب",
+            "email_field_invalid": "عنوان بريد إلكتروني غير صالح",
+            "full_name_field_required": "حقل الاسم مطلوب",
+            "message_field_required": "حقل الرسالة مطلوب"
+        }
+    },
+    "viewListings": {
+        "EN": {
+            "title_header": "Listings",
+            "name_table_cell": "Name",
+            "location_table_cell": "Location",
+            "medication_name_table_cell": "Medication Name",
+            "quantity_table_cell": "Quantity",
+            "created_at_table_cell": "Created At",
+            "needed_by_table_cell": "Needed By",
+            "actions_label_cell": "Actions",
+            "provide_action": "I Can Provide",
+            "load_more_button": "Load More"
+        },
+        "AR": {
+            "title_header": "القوائم",
+            "name_table_cell": "الاسم",
+            "location_table_cell": "الموقع",
+            "medicine_name_table_cell": "اسم الدواء",
+            "quantity_table_cell": "كمية",
+            "created_at_table_cell": "أنشئت في",
+            "need_by_table_cell": "مطلوب بواسطة",
+            "Actions_label_cell": "الإجراءات",
+            "provide_action": "يمكنني توفير",
+            "load_more_button": "تحميل المزيد"
+        }
+    },
+    "addListings": {
+        "EN": {
+            "title_header": "Add a Listing",
+            "name_label": "Name*",
+            "phone_label": "Phone*",
+            "location_label": "Location*",
+            "medication_name_label": "Medication name*",
+            "quantity_label": " Quantity*",
+            "needed_by_label": "Needed By*",
+            "submit_button": "Submit",
+            "date_field_invalid": "Date must be greater than today",
+            "date_field_required": "Date field is required",
+            "phone_field_invalid": "Invalid phone number",
+            "phone_field_required": "Phone field is required",
+            "quantity_field_required": "Quantity field is required",
+            "name_field_required": "Name field is required",
+            "medication_name_field_required": "Medication name field is required",
+            "location_field_required": "Location field is required"
+        },
+        "AR": {
+            "title_header": "إضافة قائمة",
+            "name_label": "الاسم *",
+            "phone_label": "Phone *",
+            "location_label": "الموقع *",
+            "medicine_name_label": "اسم الدواء *",
+            "quantity_label": "الكمية *",
+            "need_by_label": "مطلوب بواسطة *",
+            "Submit_button": "إرسال",
+            "date_field_invalid": "يجب أن يكون التاريخ أكبر من اليوم",
+            "date_field_required": "حقل التاريخ مطلوب",
+            "phone_field_invalid": "رقم الهاتف غير صالح",
+            "phone_field_required": "حقل الهاتف مطلوب",
+            "quantity_field_required": "حقل الكمية مطلوب",
+            "name_field_required": "حقل الاسم مطلوب",
+            "medicine_name_field_required": "حقل اسم الدواء مطلوب",
+            "location_field_required": "حقل الموقع مطلوب"
+        }
+    },
+    "notFound": {
+        "EN": {
+            "subtitle_header": "Page Not Found",
+            "paragraph": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+            "button": "HOMEPAGE"
+        },
+        "AR": {
+            "subtitle_header": "الصفحة غير موجودة",
+            "paragraph": ".ربما تمت إزالة الصفحة التي تبحث عنها ، أو تم تغيير اسمها ، أو أنها غير متاحة مؤقتًا",
+            "button": "الصفحة الرئيسية"
         }
     }
 }
