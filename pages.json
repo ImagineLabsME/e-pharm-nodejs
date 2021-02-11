@@ -52,10 +52,10 @@
             "message_field_required": "Message field is required"
         },
         "AR": {
-            "title_header": "جهة اتصال",
-            "full_name_label": "الاسم *",
-            "email_label": "البريد الإلكتروني",
-            "message_label": "الرسالة *",
+            "title_header": "تواصل معنا",
+            "full_name_label": "الاسم*",
+            "email_label": "البريد الإلكتروني*",
+            "message_label": "الرسالة*",
             "submit_button": "إرسال",
             "email_field_required": "حقل البريد الإلكتروني مطلوب",
             "email_field_invalid": "عنوان بريد إلكتروني غير صالح",
