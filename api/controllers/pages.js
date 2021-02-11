@@ -9,7 +9,9 @@ exports.page = (req, res) => {
 
         let data;
         switch (req.query.page_name) {
-            case 'sidebar': data = req.query.lang === 'EN' ? pages.sidebar.EN : data = pages.sidebar.AR 
+            case 'sidebar': data = req.query.lang === 'EN' ? pages.sidebar.EN : data = pages.sidebar.AR;
+                break;
+            case 'header': data = req.query.lang === 'EN' ? pages.header.EN : data = pages.header.AR;
                 break;
             default:
                 logger.info(`Response 204 -- No such page/content`);

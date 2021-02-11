@@ -14,5 +14,15 @@
             "sidebar_item_4": "إضافة قائمة",
             "sidebar_item_5": "مساعدة"
         }
+    },
+    "header": {
+        "EN": {
+            "header_item_1": "arabic",
+            "header_item_2": "English"
+        },
+        "AR": {
+            "header_item_1": "عربي",
+            "header_item_2": "الإنجليزية"
+        }
     }
 }

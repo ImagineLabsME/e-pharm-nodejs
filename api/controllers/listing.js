@@ -11,11 +11,14 @@ const nameCheck = require('../../utils/name-check');
 exports.viewLists = async (req, res) => {
     try {
         logger.info(`View lists controller`);
+
         const userRegex = new RegExp(req.query.search_value, 'i')
         logger.info(`Fetching lists`);
         const list = await List.find({ medication_name: userRegex }).limit(Number(req.query.paginate)).sort({ 'createdAt': 'desc' });
+        
         logger.info(`Fetching all.lists.length`);
         const length = await List.count({});
+        
         if (!list || !length) {
             !list ? logger.warn(`list error`) : logger.warn(`length error`);
             res.status(503).json({
@@ -25,6 +28,7 @@ exports.viewLists = async (req, res) => {
                 }
             })
         }
+        
         logger.info(`Response 200 -- list`);
         res.status(200).json({
             status: 'success',
