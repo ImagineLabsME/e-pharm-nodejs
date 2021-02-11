@@ -1,0 +1,18 @@
+{
+    "sidebar": {
+        "EN": {
+            "sidebar_item_1": "close",
+            "sidebar_item_2": "Home",
+            "sidebar_item_3": "View Listing",
+            "sidebar_item_4": "Add Listing",
+            "sidebar_item_5": "Help"
+        },
+        "AR": {
+            "sidebar_item_1": "أغلق",
+            "sidebar_item_2": "الصفحة الرئيسية",
+            "sidebar_item_3": "عرض القائمة",
+            "sidebar_item_4": "إضافة قائمة",
+            "sidebar_item_5": "مساعدة"
+        }
+    }
+}
