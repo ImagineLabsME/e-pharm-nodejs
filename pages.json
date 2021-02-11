@@ -21,7 +21,7 @@
             "header_item_2": "English"
         },
         "AR": {
-            "header_item_1": "عربي",
+            "header_item_1": "العربية",
             "header_item_2": "الإنجليزية"
         }
     },
@@ -56,7 +56,7 @@
             "full_name_label": "الاسم *",
             "email_label": "البريد الإلكتروني",
             "message_label": "الرسالة *",
-            "Submit_button": "إرسال",
+            "submit_button": "إرسال",
             "email_field_required": "حقل البريد الإلكتروني مطلوب",
             "email_field_invalid": "عنوان بريد إلكتروني غير صالح",
             "full_name_field_required": "حقل الاسم مطلوب",
@@ -80,16 +80,16 @@
             "title_header": "القوائم",
             "name_table_cell": "الاسم",
             "location_table_cell": "الموقع",
-            "medication_name_table_cell": "اسم الدواء",
-            "quantity_table_cell": "كمية",
+            "medication_name_table_cell": "إسم الدواء",
+            "quantity_table_cell": "الكمية",
             "created_at_table_cell": "أنشئت في",
-            "needed_by_table_cell": "مطلوب بواسطة",
+            "needed_by_table_cell": "مطلوب قبل",
             "actions_label_cell": "الإجراءات",
-            "provide_action": "يمكنني توفير",
+            "provide_action": "يمكنني التوفير",
             "load_more_button": "تحميل المزيد"
         }
     },
-    "addListings": {
+    "addListing": {
         "EN": {
             "title_header": "Add a Listing",
             "name_label": "Name*",
@@ -110,20 +110,20 @@
         },
         "AR": {
             "title_header": "إضافة قائمة",
-            "name_label": "الاسم *",
-            "phone_label": "Phone *",
-            "location_label": "الموقع *",
-            "medication_name_label": "اسم الدواء *",
-            "quantity_label": "الكمية *",
-            "needed_by_label": "مطلوب بواسطة *",
+            "name_label": "الاسم*",
+            "phone_label": "رقم التليفون*",
+            "location_label": "الموقع*",
+            "medication_name_label": "إسم الدواء*",
+            "quantity_label": "الكمية*",
+            "needed_by_label": "مطلوب قبل*",
             "submit_button": "إرسال",
             "date_field_invalid": "يجب أن يكون التاريخ أكبر من اليوم",
             "date_field_required": "حقل التاريخ مطلوب",
             "phone_field_invalid": "رقم الهاتف غير صالح",
             "phone_field_required": "حقل الهاتف مطلوب",
             "quantity_field_required": "حقل الكمية مطلوب",
-            "name_field_required": "حقل الاسم مطلوب",
-            "medication_name_field_required": "حقل اسم الدواء مطلوب",
+            "name_field_required": "حقل الإسم مطلوب",
+            "medication_name_field_required": "حقل إسم الدواء مطلوب",
             "location_field_required": "حقل الموقع مطلوب"
         }
     },
@@ -135,7 +135,7 @@
         },
         "AR": {
             "subtitle_header": "الصفحة غير موجودة",
-            "paragraph": ".ربما تمت إزالة الصفحة التي تبحث عنها ، أو تم تغيير اسمها ، أو أنها غير متاحة مؤقتًا",
+            "paragraph": ".ربما تمت إزالة الصفحة التي تبحث عنها ، أو تم تغيير إسمها ، أو أنها غير متاحة مؤقتًا",
             "button": "الصفحة الرئيسية"
         }
     }

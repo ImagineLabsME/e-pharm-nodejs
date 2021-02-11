@@ -19,7 +19,7 @@ exports.page = (req, res) => {
                 break;
             case 'viewListings': data = req.query.lang === 'EN' ? pages.viewListings.EN : pages.viewListings.AR;
                 break;
-            case 'addListings': data = req.query.lang === 'EN' ? pages.addListings.EN : pages.addListings.AR;
+            case 'addListing': data = req.query.lang === 'EN' ? pages.addListings.EN : pages.addListings.AR;
                 break;
                 case 'notFound': data = req.query.lang === 'EN' ? pages.notFound.EN : pages.notFound.AR;
                 break;
