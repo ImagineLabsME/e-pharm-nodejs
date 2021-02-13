@@ -58,7 +58,7 @@ exports.viewLists = async (req, res) => {
  * Add list route POST /api/listing/add
  * @param { Object } 
  */
-exports.addLists = async (req, res) => {
+exports.addListing = async (req, res) => {
     try {
         logger.info(`Add list controller`);
         logger.info(`Checking if name is valid`);
