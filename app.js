@@ -24,6 +24,8 @@ app.use((req, res, next) => {
 app.use('/api/listing', require('./api/routes/listing'));
 app.use('/api', require('./api/routes/contact-us'));
 
+app.use('/api/content/pages/', require('./api/routes/pages'));
+
 app.use((req, res, next) => {
     const error = new Error('404');
     error.status = 404;
