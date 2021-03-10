@@ -21,6 +21,8 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/public', express.static(__dirname + '/public'));
+
 app.use('/api/listing', require('./api/routes/listing'));
 app.use('/api', require('./api/routes/contact-us'));
 
