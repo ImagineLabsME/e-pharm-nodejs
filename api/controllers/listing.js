@@ -64,7 +64,7 @@ exports.addListing = async (req, res) => {
         logger.info(`Checking if name is valid`);
         if (!nameCheck(req.body.name)) {
             logger.warn(`Invalid name ${req.body.name}`);
-            return res.status(415).json({
+            return res.status(406).json({
                 status: response.invalidName.status,
                 data: {
                     message: response.invalidName.data.message['AR']

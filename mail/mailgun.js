@@ -6,7 +6,7 @@ const contactUsEmail = async (fullName, email, message) => {
     try {
         console.log(fullName, email, message);
         const data = {
-            from: `Phoenix Support <mailgun@${DOMAIN}>`,
+            from: `${process.env.CONTACT_US_FROM}${DOMAIN}>`,
             to: "sirajmhanna@hotmail.com",
             subject: "E-pharm Contact Form Submitted",
             text: `Full name: ${fullName} \n\nMessage: ${message} \n\nEmail: ${email}`
