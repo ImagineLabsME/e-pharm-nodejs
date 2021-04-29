@@ -1,0 +1,31 @@
+{
+  "name": "e-pharm-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImagineLabsME/e-pharm-nodejs.git"
+  },
+  "author": "Siraj Mhanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImagineLabsME/e-pharm-nodejs/issues"
+  },
+  "homepage": "https://github.com/ImagineLabsME/e-pharm-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^5.11.14",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "validator": "^13.5.2",
+    "winston": "^3.3.3"
+  }
+}
